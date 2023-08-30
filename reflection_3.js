@@ -16,12 +16,26 @@ const iter = (res, term, a, next, b) => a > b
         
 const my_sum3 = (n) => sum_iter(x => x * (x + 1), 1, x => x + 1, n);
 
-
-
-
+/*
+    1.  -> f(y => y + z);
+        -> f(y => y + 1);
+        -> g(3);
+        -> 3 + 1;
+        -> 4
+    3.  Recursive process. Linear space and time complexity
+    6.  a) x, f, g, y, h
+        b) x (constant, parameter), 
+            f (function, parameter), 
+            g (parameter, function),
+            y (parameter),
+            h (function)
+        c) 12
+        d) 7
+*/
 
 
 display(my_sum(7));
 display(my_sum2(7));
 display(my_sum3(7));
+
 0;
