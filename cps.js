@@ -45,4 +45,37 @@ display(fib_direct(6));
 display(fib_cps_v1(6, x=>x));
 display(fib_cps_v2(6, x=>x));
 
+function pow_direct_v1(b, i) {
+    return i <= 0 ? 1 : b*pow_direct_v1(b, i-1);
+}
+
+function pow_direct_v2(b, i) {
+    if (i <= 0) {
+        return 1;
+    } else if (i % 2 === 0) {
+        const tmp = pow_direct_v2(b, i/2);
+        return tmp*tmp;
+    } else {
+        const tmp = pow_direct_v2(b, (i-1)/2);
+        return tmp*tmp*b;
+    }
+}
+
+function pow_cps_v1(b, i, c) {
+    return i <= 0 ? c(1) : pow_cps_v1(b, i-1, x => c(b*x));
+}
+
+function pow_cps_v2(b, i, c) {
+    return i <= 0 
+        ? c(1)
+        : i % 2 === 0
+        ? pow_cps_v2(b, i/2, x => c(x*x))
+        : pow_cps_v2(b, (i-1)/2, x => c(x*x*b));
+}
+
+display(pow_direct_v1(2, 7));
+display(pow_direct_v2(2, 7));
+display(pow_cps_v1(2, 7, x => x));
+display(pow_cps_v2(2, 7, x => x));
+
 0;
