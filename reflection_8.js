@@ -25,7 +25,9 @@ display(acc(25, "olive")); // returns "Wrong password; no withdraw"
 display(acc(30, "my_password")); // returns "Account disabled"
 display(acc(30, "his_passcode")); // returns "Account disabled"
 
-// Q2
-// 107
+/*
+Q2
+214
+*/
 
 0;
