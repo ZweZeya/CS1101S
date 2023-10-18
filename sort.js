@@ -39,11 +39,12 @@ function insertion_sort_2(A) {
     for (let i = 1; i < len; i = i + 1) {
         const curr = A[i];
         let j = i - 1;
-        while (j >= 0 && A[j] > A[j + 1]) {
+        while (j >= 0 && A[j] > curr) {
             A[j + 1] = A[j];
             j = j - 1;
         }
         A[j + 1] = curr;
+        
     }
 }
 
@@ -96,10 +97,10 @@ function merge_sort(A) {
 }
 
 
-const a1 = [3,1,2,7,10,5,4];
-const a2 = [3,1,2,7,10,5,4];
-const a3 = [3,1,2,7,10,5,4];
-const a4 = [3,1,2,7,10,5,4];
+const a1 = [10,9,8,7,6,5,4,3,2,1];
+const a2 = [10,9,8,7,6,5,4,3,2,1];
+const a3 = [10,9,8,7,6,5,4,3,2,1];
+const a4 = [10,9,8,7,6,5,4,3,2,1];
 
 selection_sort(a1);
 insertion_sort_1(a2);
@@ -112,3 +113,6 @@ display(a3);
 display(a4);
 
 0;
+
+
+
