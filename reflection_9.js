@@ -64,14 +64,11 @@ function fib2(n) {
     let curr = 0;
     let prev = 0;
     for (let i = 0; i <= n; i = i + 1) {
-        if (i === 0) {
-            continue;
-        } else if (i === 1) {
-            curr = 1;
+        if (i < 2) {
+            curr = curr + i;
         } else {
-            const tmp = curr;
             curr = curr + prev;
-            prev = tmp;
+            prev = curr - prev;
         }
     }
     return curr;
@@ -80,10 +77,12 @@ function fib2(n) {
 display(fib(0));
 display(fib(1));
 display(fib(8));
+display(fib(11));
 
 display(fib2(0));
 display(fib2(1));
 display(fib2(8));
+display(fib2(11));
 
 /*
     Q3
