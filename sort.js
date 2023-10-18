@@ -44,7 +44,6 @@ function insertion_sort_2(A) {
             j = j - 1;
         }
         A[j + 1] = curr;
-        
     }
 }
 
