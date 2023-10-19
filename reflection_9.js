@@ -48,13 +48,9 @@ display(my_optimized_search(11)); // false
 
 // Q2
 function fib(n) {
-    const dp = [];
-    for (let i = 0; i <= n; i = i + 1) {
-        if (i < 2) {
-            dp[i] = i;
-        } else {
-            dp[i] = dp[i - 1] + dp[i - 2];
-        }
+    const dp = [0, 1];
+    for (let i = 2; i <= n; i = i + 1) {
+        dp[i] = dp[i - 1] + dp[i - 2];
     }
     return dp[n];
 }
