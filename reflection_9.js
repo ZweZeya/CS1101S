@@ -35,7 +35,6 @@ function make_optimized_search(A) {
         B[i] = A[i];
     }
     insertion_sort_2(B);
-    display(B);
     return x => b_search(B, x);
 }
 
