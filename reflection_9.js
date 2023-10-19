@@ -81,8 +81,8 @@ display(fib2(11));
 
 /*
     Q3
-    order of growth in time: O(nk)
-    order of growth in space: O(nk)
+    order of growth in time: O(nk) or Theta(k(n - k))
+    order of growth in space: O(nk) or Theta(k(n - k))
 */
 
 0;
