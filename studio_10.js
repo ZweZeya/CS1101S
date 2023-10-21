@@ -3,24 +3,24 @@
 */
 
 // Q2b
-// function bubblesort_list(L) {
-//     const len = length(L);
-//     for (let i = len - 1; i >= 1; i = i - 1) {
-//         let curr = L;
-//         for (let j = 0; j < i; j = j + 1) {
-//             if (head(curr) > head(tail(curr))) {
-//                 const tmp = head(tail(curr));
-//                 set_head(tail(curr), head(curr));
-//                 set_head(curr, tmp);
-//             }
-//             curr = tail(curr);
-//         }
-//     }
-// }
+function bubblesort_list(L) {
+    const len = length(L);
+    for (let i = len - 1; i >= 1; i = i - 1) {
+        let curr = L;
+        for (let j = 0; j < i; j = j + 1) {
+            if (head(curr) > head(tail(curr))) {
+                const tmp = head(tail(curr));
+                set_head(tail(curr), head(curr));
+                set_head(curr, tmp);
+            }
+            curr = tail(curr);
+        }
+    }
+}
 
-// const l1 = list(5,4,3,6,10,2,1,8,9,7);
-// bubblesort_list(l1);
-// display(l1);
+const l1 = list(5,4,3,6,10,2,1,8,9,7);
+bubblesort_list(l1);
+display(l1);
 
 // Q3b
 function cc(amount, kinds_of_coins) {
