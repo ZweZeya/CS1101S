@@ -38,7 +38,7 @@ function fun_to_series(fun) {
 }
 
 const ones = pair(1, () => ones);
-const alt_ones = pair(1, () => pair(-head(alt_ones), () => alt_ones));
+const alt_ones = pair(1, () => pair(-1, () => alt_ones));
 // display(head(alt_ones));
 // display(head(stream_tail(alt_ones)));
 // display(head(stream_tail(stream_tail(alt_ones))));
